@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="src/style/index.css">
+  <script src="src/js/index.js" defer></script>
+
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,28 +18,46 @@
   </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
+  <main>
+      <!-- Rating state start -->
+      <div class="card">
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+        <div class="button-container">
+          <button class="button">
+            1
+          </button>
+          <button class="button">
+            2
+          </button>
+          <button class="button">
+            3
+          </button>
+          <button class="button">
+            4
+          </button>
+          <button class="button">
+            5
+          </button>
+        </div>
+        <button class="submit-button">
+          Submit
+        </button>
+      </div>
+      <!-- Rating state end -->
+  </main>
 
   <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
+<!-- 
+  You selected  out of 5
 
   Thank you!
 
   We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+  don’t hesitate to get in touch! -->
 
   <!-- Thank you state end -->
 
