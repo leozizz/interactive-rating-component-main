@@ -6,7 +6,7 @@ main {
     background-color: #141519;
 }
 
-h1 {
+h1, h2 {
     color: #ffffff;
     font-size: 2.5rem;
 }
@@ -20,13 +20,17 @@ p {
 .card {
     background: linear-gradient(#232a34 0%, #171e28 100%);
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     width: 50%;
     height: 400px;
     width: 400px;
     padding: 10px 30px;
     border-radius: 30px;
+}
+
+.card .rating-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .icon {
@@ -81,4 +85,28 @@ p {
 .submit-button:hover {
     background-color: #ffffff;
     color: #fd7516;
+}
+
+/* Thank you State */
+
+.card .thank-you-state {
+    padding: 20px 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.thank-you-icon {
+    width: 50%;
+    align-self: center;
+}
+
+.selection-info {
+    margin-bottom: 20px;
+    padding: 5px 20px 2px;
+    background: #262f38;
+    color: #fd7516;
+    border-radius: 50px;
 }
