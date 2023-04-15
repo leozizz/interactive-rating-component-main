@@ -3,22 +3,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #141519;
+    background-color: var(--main-bg-color);
 }
 
 h1, h2 {
-    color: #ffffff;
+    color: var(--title-color);
     font-size: 2.5rem;
 }
 
-p {
-    color: hsl(217, 12%, 63%);
+p, span, a {
+    color: var(--text-color);
     font-size: 1.5rem;
     line-height: 2.5rem;
 }
 
 .card {
-    background: linear-gradient(#232a34 0%, #171e28 100%);
+    background: var(--card-gradient);
     display: flex;
     width: 50%;
     height: 400px;
@@ -27,7 +27,9 @@ p {
     border-radius: 30px;
 }
 
-.card .rating-state {
+/* Rating State */
+
+.card #rating-state {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -38,7 +40,7 @@ p {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: #262f38;
+    background-color: var(--button-bg-color);
     padding: 10px;
 }
 
@@ -56,21 +58,32 @@ p {
 .rating-button {
     font-size: 1.5rem;
     color: #7e8490;
-    background-color: #262f38;
+    background-color: var(--button-bg-color);
     border: none;
     border-radius: 100%;
     width: 50px;
     height: 50px;
-    padding-top: 1%;
+    padding-top: 0.3rem ;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .rating-button:hover {
-    background-color: #7e8490;
-    color: #ffffff;
+    background-color: var(--secondary-color);
+    color: var(--active-color);
 }
 
-.submit-button {
+.rating-button.active {
+    background-color: var(--primary-color);
+    color: var(--active-text-color);
+}
+
+#rating-alert {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#submit-button {
     margin-top: 10px;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -78,18 +91,19 @@ p {
     border-radius: 50px;
     padding: 15px;
     cursor: pointer;
-    background-color: #fd7516;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--active-text-color);
+    transition: 0.2s;
 }
 
-.submit-button:hover {
-    background-color: #ffffff;
-    color: #fd7516;
+#submit-button:hover {
+    background-color: var(--active-color);
+    color: var(--primary-color);
 }
 
 /* Thank you State */
 
-.card .thank-you-state {
+.card #thank-you-state {
     padding: 20px 0;
     display: none;
     flex-direction: column;
@@ -106,7 +120,22 @@ p {
 .selection-info {
     margin-bottom: 20px;
     padding: 5px 20px 2px;
-    background: #262f38;
-    color: #fd7516;
+    background: var(--button-bg-color);
+    color: var(--primary-color);
     border-radius: 50px;
+}
+
+.selection-info .rating {
+    color: var(--primary-color);
+}
+
+/* Attribution */
+
+.attribution {
+    align-self: flex-end;
+    position: absolute;
+}
+
+.attribution a {
+    color: var(--primary-color);
 }
