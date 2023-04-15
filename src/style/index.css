@@ -89,6 +89,7 @@ p, span, a {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     border-radius: 50px;
+    border: none;
     padding: 15px;
     cursor: pointer;
     background-color: var(--primary-color);
