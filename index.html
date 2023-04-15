@@ -16,17 +16,12 @@
 
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <main>
       <div class="card">
         <!-- Rating state start -->
-        <div class="rating-state">
+        <div id="rating-state">
           <span class="icon">
             <img src="images/icon-star.svg" alt="star icon" class="icon-star">
           </span>
@@ -52,16 +47,17 @@
               5
             </button>
           </div>
-          <button class="submit-button">
+          <span id="rating-alert"></span>
+          <button id="submit-button">
             Submit
           </button>
         </div>
         <!-- Rating state end -->
 
         <!-- Thank you state start -->
-        <div class="thank-you-state">
+        <div id="thank-you-state">
           <img src="images/illustration-thank-you.svg" class= "thank-you-icon" alt="Phone illustration">
-        <p class="selection-info">You selected  out of 5</p>
+        <p class="selection-info">You selected <span class="rating"></span> out of 5</p>
         <h2>Thank you!</h2>
         <p>
           We appreciate you taking the time to give a rating. If you ever need more support, 
@@ -70,11 +66,11 @@
         <!-- Thank you state end -->
         </div>
       </div>
-  </main>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="attribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/leozizz">Leozizz</a>.</p>
+      </div>
+  </main>
 </body>
 </html>
