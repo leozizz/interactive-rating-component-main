@@ -1,7 +1,21 @@
+:root {
+    /* main colors */
+    --main-bg-color: #141519;
+    --title-color: #ffffff;
+    --active-color: #ffffff;
+    --card-gradient: linear-gradient(#232a34 0%, #171e28 100%);
+    --button-bg-color: #262f38;
+    --text-color: #7e8490;
+    --active-text-color: #ffffff;
+    --primary-color: #fd7516;
+    --secondary-color: #7e8490;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
     font-size: 62.5%;
+    text-decoration: none;
 }
