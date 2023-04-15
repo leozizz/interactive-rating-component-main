@@ -31,7 +31,7 @@ The challenge was to build an interactive rating component that users can intera
 
 ## Links
 
-Solution URL: https://github.com/leozizz/interactive-rating-component
+Solution URL: https://www.frontendmentor.io/solutions/solution-interactive-rating-component-4uLC43qufP
 
 Live Site URL: https://leozizz.github.io/interactive-rating-component-main/
 
