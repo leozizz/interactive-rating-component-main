@@ -3,3 +3,10 @@
         width: 90%;
     }
 }
+
+@media (max-width: 399px) {
+    .rating-number {
+        left: 20px;
+        top: -40px;
+    }
+}

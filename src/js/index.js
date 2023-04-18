@@ -1,34 +1,33 @@
 const ratingState = document.querySelector("#rating-state")
 const thankYouState = document.querySelector("#thank-you-state")
 const submitButton = document.querySelector("#submit-button")
-const ratingButton = document.querySelectorAll(".rating-button")
+const ratingButton = document.getElementsByName("ratings")
 const ratingAlert = document.querySelector("#rating-alert")
-let selectedRating = null
+let rating = document.querySelector(".rating")
 
 submitButton.addEventListener("click", function(e) {
     e.preventDefault()
 
-    if (selectedRating !== null) {
-        ratingState.style.display = "none"
-        thankYouState.style.display = "flex"
-    } else {
-        ratingAlert.textContent = ("You must choose a rating between 1 and 5")
+    checkRadioValues(ratingButton)
+
+    rating.textContent ? changeStates() : selectionAlert()
+
+})
+
+function checkRadioValues(radios) {
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            rating.textContent = `${radios[i].value}`
+            break
+        }
     }
+}
 
-})
+function changeStates() {
+    ratingState.style.display = "none"
+    thankYouState.style.display = "flex"
+}
 
-ratingButton.forEach(button => {
-    button.addEventListener("click", function() {
-        this.classList.add("active")
-        selectedRating = this.textContent
-        
-        const rating = document.querySelector(".rating")
-        rating.textContent = `${this.textContent}`
-
-        ratingButton.forEach(otherButton => {
-            if (otherButton != this) {
-                otherButton.classList.remove("active")
-            }
-        })
-    })
-})
+function selectionAlert() {
+    ratingAlert.textContent = "You must choose a rating between 1 and 5"
+}
