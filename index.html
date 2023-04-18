@@ -20,53 +20,77 @@
 </head>
 <body>
   <main>
-      <div class="card">
-        <!-- Rating state start -->
-        <div id="rating-state">
-          <span class="icon">
-            <img src="images/icon-star.svg" alt="star icon" class="icon-star">
-          </span>
-          <h1>How did we do?</h1>
-          <p>
-            Please let us know how we did with your support request. All feedback is appreciated 
-            to help us improve our offering!
-          </p>
-          <div class="button-container">
-            <button class="rating-button">
-              1
-            </button>
-            <button class="rating-button">
-              2
-            </button>
-            <button class="rating-button">
-              3
-            </button>
-            <button class="rating-button">
-              4
-            </button>
-            <button class="rating-button">
-              5
+      <section class="card">
+        <form action="" id="form">
+          <!-- Rating state start -->
+          <div id="rating-state">
+            <span class="icon">
+              <img src="images/icon-star.svg" alt="star icon" class="icon-star">
+            </span>
+            <h1>How did we do?</h1>
+            <p>
+              Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!
+            </p>
+            <div class="button-container">
+              
+              <label>
+                <input type="radio" name="ratings" class="rating-button" value="1">
+                <span class="rating-number">
+                  1
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="ratings" class="rating-button" value="2">
+                <span class="rating-number">
+                  2
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="ratings" class="rating-button" value="3">
+                <span class="rating-number">
+                  3
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="ratings" class="rating-button" value="4">
+                <span class="rating-number">
+                  4
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="ratings" class="rating-button" value="5">
+                <span class="rating-number">
+                  5
+                </span>
+              </label>
+              
+            </div>
+            <span id="rating-alert"></span>
+            <button id="submit-button">
+              Submit
             </button>
           </div>
-          <span id="rating-alert"></span>
-          <button id="submit-button">
-            Submit
-          </button>
-        </div>
-        <!-- Rating state end -->
+          <!-- Rating state end -->
 
-        <!-- Thank you state start -->
-        <div id="thank-you-state">
-          <img src="images/illustration-thank-you.svg" class= "thank-you-icon" alt="Phone illustration">
-        <p class="selection-info">You selected <span class="rating"></span> out of 5</p>
-        <h2>Thank you!</h2>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need more support, 
-          don’t hesitate to get in touch!
-        </p>
-        <!-- Thank you state end -->
-        </div>
-      </div>
+          <!-- Thank you state start -->
+          <div id="thank-you-state">
+            <img src="images/illustration-thank-you.svg" class= "thank-you-icon" alt="Phone illustration">
+          <p class="selection-info">You selected <span class="rating"></span> out of 5</p>
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+          <!-- Thank you state end -->
+          </div>
+        </form>
+        
+      </section>
 
       <div class="attribution">
         <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
